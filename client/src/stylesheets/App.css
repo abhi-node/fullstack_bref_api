@@ -1,0 +1,13 @@
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+.stats-list {
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
