@@ -5,8 +5,10 @@ const SearchForm = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.parentCallback(player);
-        alert(`The name you entered was: ${player}`)
+        const params = {
+            name: player
+        }
+        props.parentCallback(params);
     }
 
     const setter = (event) => {

@@ -15,14 +15,10 @@ const App = () => {
     blk: 0
 });
 
-  const searchName = async (name) => {
-    const response = await fetch('http://localhost:3000/api/post', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ name })
-    }).then((res) => res.json())
+  const searchName = async (params) => {
+    const queryString = new URLSearchParams(params).toString()
+    const response = await fetch(`http://localhost:3000/api/post?${queryString}`)
+    .then((res) => res.json())
       .then((json) => setContent(json))
       .catch((error) => console.log(error));
 

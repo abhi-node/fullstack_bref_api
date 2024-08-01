@@ -16,8 +16,8 @@ app.get("/api", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 
-app.post("/api/post", async (req, res) => {
-  const { name } = req.body;
+app.get("/api/post", async (req, res) => {
+  const name = req.query.name;
   console.log('Received name:', name);
   try {
     const final_player = await scrapeData(name);
