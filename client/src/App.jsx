@@ -17,7 +17,7 @@ const App = () => {
 
   const searchName = async (params) => {
     const queryString = new URLSearchParams(params).toString()
-    const response = await fetch(`http://localhost:3000/api/post?${queryString}`)
+    const response = await fetch(`http://localhost:3000/api?${queryString}`)
     .then((res) => res.json())
       .then((json) => setContent(json))
       .catch((error) => console.log(error));

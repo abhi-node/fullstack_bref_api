@@ -11,12 +11,7 @@ app.use(express.json());
 // app.use(express.static(path.resolve(__dirname, '../client/dev')));
 
 // Handle GET requests to /api route
-app.get("/api", (req, res) => {
-  console.log('test')
-  res.json({ message: "Hello from server!" });
-});
-
-app.get("/api/post", async (req, res) => {
+app.get("/api", async (req, res) => {
   const name = req.query.name;
   console.log('Received name:', name);
   try {
